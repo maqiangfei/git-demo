@@ -17,6 +17,11 @@ public class TestController {
         return "hello";
     }
 
+    @GetMapping("/hi")
+    public String hi() {
+        return "hi";
+    }
+
     @GetMapping("/v2")
     public String v2() {
         return "v2";
