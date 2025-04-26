@@ -51,11 +51,11 @@ public class TestController {
         return "localNewCommit";
     }
 
+    // 远程仓库改变后本地不拉取就commit，那么当本地push时会失败，要求先合并
     @GetMapping("remoteChangeAndLocalCommitPush")
     public String remoteChangeAndLocalCommitPush() {
         return "remoteChangeAndLocalCommitPush";
     }
-
     @GetMapping("/localNewCommitAndPush")
     public String localNewCommitAndPush() {
         return "localNewCommitAndPush";
