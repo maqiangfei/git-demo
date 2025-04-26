@@ -17,13 +17,18 @@ public class TestController {
         return "hello";
     }
 
-    @GetMapping("/hi")
+    @GetMapping("/hi4RemoteChange")
     public String hi() {
-        return "hi";
+        return "hi4RemoteChange";
     }
 
     @GetMapping("/v2")
     public String v2() {
         return "v2";
+    }
+
+    @GetMapping("/remoteAdd")
+    public String remoteAdd() {
+        return "remoteAdd";
     }
 }
