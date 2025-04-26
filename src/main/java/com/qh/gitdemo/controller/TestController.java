@@ -31,4 +31,9 @@ public class TestController {
     public String remoteAdd() {
         return "remoteAdd";
     }
+
+    @GetMapping("/remoteAddAndLocalChange")
+    public String remoteAddAndLocalChange() {
+        return "remoteAddAndLocalChange";
+    }
 }
