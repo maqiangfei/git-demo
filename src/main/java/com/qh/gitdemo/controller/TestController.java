@@ -36,4 +36,9 @@ public class TestController {
     public String remoteAddAndLocalChange() {
         return "remoteAddAndLocalChange";
     }
+
+    @GetMapping("/remoteAddAndLocalCommit")
+    public String remoteAddAndLocalCommit() {
+        return "remoteAddAndLocalCommit";
+    }
 }
