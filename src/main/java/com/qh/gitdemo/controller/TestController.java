@@ -21,4 +21,9 @@ public class TestController {
     public String hi() {
         return "hi";
     }
+
+    @GetMapping("/commit5")
+    public String commit5() {
+        return "commit5";
+    }
 }
