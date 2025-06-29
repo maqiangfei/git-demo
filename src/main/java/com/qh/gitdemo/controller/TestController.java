@@ -60,4 +60,9 @@ public class TestController {
     public String localNewCommitAndPush() {
         return "localNewCommitAndPush";
     }
+
+    @GetMapping("/remoteCommit")
+    public String remoteCommit() {
+        return "remoteCommit";
+    }
 }
