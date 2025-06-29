@@ -21,9 +21,4 @@ public class TestController {
     public String hi() {
         return "hi";
     }
-
-    @GetMapping("/commit4")
-    public String commit4() {
-        return "commit4";
-    }
 }
