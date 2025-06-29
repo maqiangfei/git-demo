@@ -80,6 +80,11 @@ public class TestController {
         return "localNewCommit3";
     }
 
+    @GetMapping("/remoteCommit2")
+    public String remoteCommit2() {
+        return "remoteCommit2";
+    }
+
     @GetMapping("/localNewCommit4")
     public String localNewCommit4() {
         return "localNewCommit4";
