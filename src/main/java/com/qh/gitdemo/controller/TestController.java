@@ -69,4 +69,9 @@ public class TestController {
     public String remoteCommit() {
         return "remoteCommit";
     }
+
+    @GetMapping("/remoteCommit1")
+    public String remoteCommit1() {
+        return "remoteCommit1";
+    }
 }
