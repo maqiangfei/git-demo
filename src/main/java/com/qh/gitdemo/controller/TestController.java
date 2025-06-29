@@ -70,6 +70,11 @@ public class TestController {
         return "remoteCommit";
     }
 
+    @GetMapping("/remoteCommit1")
+    public String remoteCommit1() {
+        return "remoteCommit1";
+    }
+
     @GetMapping("/localNewCommit3")
     public String localNewCommit3() {
         return "localNewCommit3";
