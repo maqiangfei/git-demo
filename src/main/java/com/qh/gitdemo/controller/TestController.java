@@ -39,8 +39,8 @@ public class TestController {
 
     // 远程仓库改变后本地不拉取就commit，那么当本地push时会失败，要求先合并
     // update project 两种方式：
-    // 1. merge方式，该方式会将远程提交和本地提交混为一个提交（merge...）
-    // 2. rebase方式，插入远程提交在本地提交前，然后将本地提交改为合并后的版本（可以重新命名）
+    // 1. merge方式，该方式会将远程提交和本地提交混为一个新的提交（出现分叉）
+    // 2. rebase方式，插入远程提交在本地提交前，然后将本地提交改为合并后的版本（未分叉，推荐）
     @GetMapping("remoteChangeAndLocalCommitPush")
     public String remoteChangeAndLocalCommitPush() {
         return "remoteChangeAndLocalCommitPush";
@@ -78,5 +78,10 @@ public class TestController {
     @GetMapping("/localNewCommit3")
     public String localNewCommit3() {
         return "localNewCommit3";
+    }
+
+    @GetMapping("/localNewCommit4")
+    public String localNewCommit4() {
+        return "localNewCommit4";
     }
 }
