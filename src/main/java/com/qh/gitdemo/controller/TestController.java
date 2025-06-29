@@ -5,6 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 1. revert commit -> 撤销提交，不删除历史提交，而是创建一个新的提交（Revert "..."）
+ * 2. reset commit -> 删除提交
+ *      soft：删除提交，保留修改且保留暂存区
+ *      mixed：删除提交，保留修改但不保留暂存区，需重新 add
+ *      hard：删除提交，不保留修改（代码丢失）
+ * 3. undo commit -> 删除最新的一次提交，等同于 reset --soft
+ * 4. cherry pick -> 将其他分支的提交提取到当前分支
+ * update project 两种方式：
+ *      1. merge方式，该方式会将远程提交和本地提交混为一个新的提交（Merge ... 出现分叉）
+ *      2. rebase方式，插入远程提交在本地提交前，然后将本地提交改为合并后的版本（不会产生新的提交，不分叉，推荐）
+ * 本地不 pull 就 commit，那么会 push 失败，要求先更新，可以选择 merge 或 rebase
+ * 本地不 pull 就 commit，此时再 pull 会 merge
+ *
  * @author maqiangfei
  * @since 2025/4/20 13:51
  **/
@@ -85,6 +98,7 @@ public class TestController {
         return "remoteCommit2";
     }
 
+    // 本地未拉取commit后再拉取，会marge
     @GetMapping("/localNewCommit4")
     public String localNewCommit4() {
         return "localNewCommit4";
